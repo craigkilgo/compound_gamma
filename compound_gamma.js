@@ -3,7 +3,7 @@ function compound_gamma_dist(x,a,b,q,cumulative){
     if(cumulative==false){
         compound_gamma_dist = (x * q) ^ (a - 1) * (1 + x * q) ^ (-a - b) / (1 / q * beta_function(a, b));
     }else{
-        compound_gamma_dist = BETA.DIST(1 / (1 + (1 / q) / x), a, b, true);
+        compound_gamma_dist = BETA.DIST(1 / (1 + (1 / q) / x), a, b);
     }
     return compound_gamma_dist;
 }
