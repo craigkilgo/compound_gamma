@@ -10,7 +10,7 @@ function compound_gamma_dist(x,a,b,q,cumulative){
 
 function beta_function(a,b){
     var beta_function;
-    beta_function = Math.exp(GAMMALN(a) + GAMMALN(b) - GAMMALN(a + b))
+    beta_function = Math.exp(GAMMALN(a) + GAMMALN(b) - GAMMALN(a + b));
 
     return beta_function;
 }
