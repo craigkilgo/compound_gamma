@@ -1,5 +1,5 @@
 function log_beta_function(alpha2,beta2){
-    var log_beta_function = WorksheetFunction.GammaLn(alpha2) + WorksheetFunction.GammaLn(beta2) - WorksheetFunction.GammaLn(alpha2 + beta2)
+    var log_beta_function = GammaLn(alpha2) + GammaLn(beta2) - GammaLn(alpha2 + beta2)
     return log_beta_function;
 }
 
@@ -8,7 +8,7 @@ function beta_binomial_dist(x, n, a, b, cumulative){
     var i;
     var result;
     if(!cumulative){
-        beta_binomial_dist = WorksheetFunction.Combin(n, x) * Exp(log_beta_function(x + a, n - x + b) - log_beta_function(a, b));
+        beta_binomial_dist = Combin(n, x) * Exp(log_beta_function(x + a, n - x + b) - log_beta_function(a, b));
     }else{
         i = 0;
         result = 0;
