@@ -1,5 +1,5 @@
 function log_beta_function(alpha2,beta2){
-    var log_beta_function = GammaLn(alpha2) + GammaLn(beta2) - GammaLn(alpha2 + beta2)
+    var log_beta_function = GAMMALN(alpha2) + GAMMALN(beta2) - GAMMALN(alpha2 + beta2)
     return log_beta_function;
 }
 
